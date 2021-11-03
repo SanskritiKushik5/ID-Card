@@ -1,16 +1,5 @@
-# id_card
+# ID_card
 
 A new Flutter project.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img width="187" alt="snip" src="https://user-images.githubusercontent.com/65829453/140036427-b4dc0164-e548-4e3e-a995-2e1d6d6bb0f1.PNG">
