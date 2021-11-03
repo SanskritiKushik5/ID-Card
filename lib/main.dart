@@ -1,25 +1,42 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: IdCard(),
   ));
 }
-class IdCard extends StatelessWidget {
-  // const IdCard({Key? key}) : super(key: key);
+class IdCard extends StatefulWidget {
+  const IdCard({Key? key}) : super(key: key);
+
+  @override
+  State<IdCard> createState() => _IdCardState();
+}
+
+class _IdCardState extends State<IdCard> {
+
+  int idlevel = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: Text('ID Card'),
+        title: const Text('ID Card'),
         centerTitle: true,
         backgroundColor: Colors.grey[850],
         elevation: 0.0,
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            idlevel += 1;
+          });
+        },
+        child: Icon(Icons.add),
+        backgroundColor: Colors.grey[800],
+      ),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
+        padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -52,7 +69,7 @@ class IdCard extends StatelessWidget {
             ),
             const SizedBox(height: 30.0),
             const Text(
-              'DESIGNATION',
+              'ID LEVEL',
               style: TextStyle(
                 color: Colors.grey,
                 letterSpacing: 2.0,
@@ -60,7 +77,7 @@ class IdCard extends StatelessWidget {
             ),
             const SizedBox(height: 10.0),
             Text(
-              'Software Developer',
+              '$idlevel',
               style: TextStyle(
                 color: Colors.amberAccent[200],
                 letterSpacing: 2.0,
@@ -75,7 +92,7 @@ class IdCard extends StatelessWidget {
                   Icons.mail,
                   color: Colors.grey[400],
                 ),
-                SizedBox(width: 10.0),
+                const SizedBox(width: 10.0),
                 Text(
                   'sanskritikushik23@gmail.com',
                   style: TextStyle(
@@ -92,4 +109,5 @@ class IdCard extends StatelessWidget {
     );
   }
 }
+
 
